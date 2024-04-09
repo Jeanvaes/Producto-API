@@ -7,30 +7,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/producto")
 @AllArgsConstructor
 public class ProductoController {
 
     @Autowired
     private ProductoRepository productRepository;
 
-    @GetMapping
+    @GetMapping(path = "/todos")
     public List<Producto> getAllProducts() {
         return productRepository.findAll();
     }
 
-    @PostMapping
-    public Producto addProduct(@RequestBody Producto product) {
-        return productRepository.save(product);
+    @PostMapping(path = "/agregar")
+    public String addProduct(@RequestBody Producto product) {
+
+        try {
+            productRepository.save(product);
+            return "Se guardo el producto";
+        }catch (IllegalArgumentException e){
+            return "No se guardo el producto";
+        }
+
     }
 
-    @DeleteMapping
-    public String deleteProduct(){
+    @DeleteMapping(path = "/eliminar/{id}")
+    public String deleteProduct(@PathVariable String id){
         try {
-
-            return "";
+            productRepository.deleteById(id);
+            return "Se agrego el producto";
         }catch (IllegalArgumentException e) {
-            return "";
+            return "No se eleminino el producto";
         }
     }
 

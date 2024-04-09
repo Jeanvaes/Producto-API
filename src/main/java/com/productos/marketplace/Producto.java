@@ -5,11 +5,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document
+@Document(collection = "Producto")
 public class Producto {
     @Id
     private String id;
-    private String nonmbre;
+    private String nombre;
     private double precio;
     private int cantidad;
 }
