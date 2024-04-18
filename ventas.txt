@@ -1,0 +1,6 @@
+Venta realizada - Producto : ferrari, Cantidad: 1, Fecha y hora: 2024-04-17 18:57:25
+Venta realizada - Producto : ferrari, Cantidad: 22, Fecha y hora: 2024-04-17 23:05:32
+Venta realizada - Producto : dog, Cantidad: 8, Fecha y hora: 2024-04-17 23:05:39
+Venta realizada - Producto : ferrari, Cantidad: 9, Fecha y hora: 2024-04-17 23:48:28
+Venta realizada - Producto : ferrari, Cantidad: 9, Fecha y hora: 2024-04-17 23:53:32
+Venta realizada - Producto : dog, Cantidad: 1, Fecha y hora: 2024-04-17 23:54:45

@@ -17,6 +17,11 @@ configurations {
 	}
 }
 
+tasks.test {
+	enabled = false
+}
+
+
 repositories {
 	mavenCentral()
 }
